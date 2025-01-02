@@ -192,7 +192,7 @@ function WebRTC() {
   useEffect(() => {
     if (!window.gstWebRTCAPI) {
       window.gstWebRTCAPI = gstWebRTCAPI
-      start(config)
+      start({ signalingServerUrl: 'wss://gst-webrtc-signalling-server.hexaforce.io' })
     }
     const listener = {
       connected: (id) => setClientId(id),
