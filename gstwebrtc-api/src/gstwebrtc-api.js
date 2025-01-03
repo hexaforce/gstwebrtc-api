@@ -366,6 +366,9 @@ function start(userConfig) {
   }
 
   apiState.config = config
+
+  console.log('start:', config)
+
   connectChannel()
 }
 

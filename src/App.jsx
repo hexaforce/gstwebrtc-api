@@ -190,10 +190,12 @@ function WebRTC() {
   const [clientId, setClientId] = useState('none')
 
   useEffect(() => {
-    if (!window.gstWebRTCAPI) {
-      window.gstWebRTCAPI = gstWebRTCAPI
-      start({ signalingServerUrl: 'wss://gst-webrtc-signalling-server.hexaforce.io' })
-    }
+    window.gstWebRTCAPI = gstWebRTCAPI
+    start({
+      signalingServerUrl: 'wss://gst-webrtc-signalling-server.hexaforce.io/webrtc',
+      // meta: { name: window.location.hostname },
+    })
+
     const listener = {
       connected: (id) => setClientId(id),
       disconnected: () => setClientId('none'),

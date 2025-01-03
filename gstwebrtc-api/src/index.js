@@ -49,11 +49,11 @@ import { gstWebRTCAPI, start } from './gstwebrtc-api.js'
  * @see https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement
  */
 
-if (!window.gstWebRTCAPI) {
-  window.gstWebRTCAPI = gstWebRTCAPI
-  window.addEventListener('DOMContentLoaded', () => {
-    start(window.gstWebRTCConfig)
-  })
-}
+// if (!window.gstWebRTCAPI) {
+//   window.gstWebRTCAPI = gstWebRTCAPI
+//   window.addEventListener('DOMContentLoaded', () => {
+//     start(window.gstWebRTCConfig)
+//   })
+// }
 
 export { gstWebRTCAPI, start }
